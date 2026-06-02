@@ -34,9 +34,7 @@ function Hero() {
                                 words={[
                                     "Unity Game Developer",
                                     "Simulation Developer",
-                                    "Gameplay Programmer",
                                     "Mobile Game Creator",
-                                    "Full Stack Developer"
                                 ]}
                                 loop={0}
                                 cursor
@@ -57,7 +55,7 @@ function Hero() {
 
                             Experienced in developing commercial
                             simulation platforms, published Play Store
-                            applications and full-stack web products.
+                            applications and web products.
 
                         </p>
 

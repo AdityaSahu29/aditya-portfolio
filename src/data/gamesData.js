@@ -85,8 +85,8 @@ const gamesData = [
         features: [
             "2 Turret Types",
             "2 Enemy Types",
-            "Wave System",
             "Strategic Gameplay",
+            "Wave System",
             "Enemy AI",
             "Progressive Difficulty"
         ],
@@ -155,10 +155,10 @@ const gamesData = [
         features: [
             "Electric Wand",
             "Freeze Wand",
+            "Wave-Based Combat",
             "Poison Wand",
             "Stun Wand",
-            "AI Companion",
-            "Wave-Based Combat"
+            "AI Companion"
         ],
 
         technologies: [

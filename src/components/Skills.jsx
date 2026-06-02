@@ -1,49 +1,112 @@
 import { Container } from "react-bootstrap";
 
-const skills = [
-    "Unity",
-    "C#",
-    "Game Development",
-    "Mobile Games",
-    "Physics Systems",
-    "UI Design",
-    "Animation",
-    "Git",
-    "Plastic SCM",
-    "Adobe Animate",
-    "React",
-    "Node.js",
-    "SQLite",
-    "Problem Solving"
-];
-
 function Skills() {
+
+    const categories = [
+
+        {
+            title: "Game Development",
+
+            skills: [
+                "Unity",
+                "C#",
+                "Physics",
+                "Animation",
+                "UI Systems",
+                "Addressables",
+                "Gameplay Programming"
+            ]
+        },
+
+        {
+            title: "Programming",
+
+            skills: [
+                "Python",
+                "Java",
+                "ActionScript",
+                "C#"
+            ]
+        },
+
+        {
+            title: "Tools",
+
+            skills: [
+                "Git",
+                "Plastic SCM",
+                "VS Code",
+                "Android Studio"
+            ]
+        },
+
+        {
+            title: "Soft Skills",
+
+            skills: [
+                "Problem Solving",
+                "Communication",
+                "Team Collaboration",
+                "Leadership",
+                "Client Management",
+                "Requirement Gathering"
+            ]
+        }
+
+    ];
+
     return (
+
         <section id="skills">
 
             <Container>
 
                 <h2 className="display-4 text-center neon-text mb-5">
-                    TECH STACK
+                    SKILLS & EXPERTISE
                 </h2>
 
-                <div className="text-center">
+                <div className="skills-grid">
 
-                    {skills.map((skill, index) => (
-                        <span
-                            key={index}
-                            className="skill-pill"
-                        >
-                            {skill}
-                        </span>
-                    ))}
+                    {
+                        categories.map((cat, index) => (
+
+                            <div
+                                key={index}
+                                className="skill-category"
+                            >
+
+                                <h3>{cat.title}</h3>
+
+                                <div>
+
+                                    {
+                                        cat.skills.map((skill, i) => (
+
+                                            <span
+                                                key={i}
+                                                className="skill-pill"
+                                            >
+                                                {skill}
+                                            </span>
+
+                                        ))
+                                    }
+
+                                </div>
+
+                            </div>
+
+                        ))
+                    }
 
                 </div>
 
             </Container>
 
         </section>
+
     );
+
 }
 
 export default Skills;

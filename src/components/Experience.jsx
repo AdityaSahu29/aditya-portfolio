@@ -1,101 +1,161 @@
 import { Container } from "react-bootstrap";
 
 function Experience() {
+
+    const jobs = [
+
+        {
+            year: "2025 - Present",
+            company: "Ind-Velloni",
+            role: "Developer",
+
+            tech: [
+                "React",
+                "Node.js",
+                "Express",
+                "SQLite",
+                "AI"
+            ],
+
+            achievements: [
+                "Applicant Tracking System",
+                "Agreement Management System",
+                "TenderTrack"
+            ]
+        },
+
+        {
+            year: "2024 - 2025",
+            company: "Workverse",
+            role: "Game Developer & Growth Architect",
+
+            tech: [
+                "Unity",
+                "C#",
+                "Simulation",
+                "Mobile"
+            ],
+
+            achievements: [
+                "Workverse",
+                "Bellverse",
+                "Kamlaverse"
+            ]
+        },
+
+        {
+            year: "2024",
+            company: "Big Pixel Technologies",
+            role: "Game Developer",
+
+            tech: [
+                "Adobe Animate",
+                "ActionScript",
+                "Android"
+            ],
+
+            achievements: [
+                "ABC Preschool Games",
+                "Animal Coloring Games",
+                "Mandala Art"
+            ]
+        },
+
+        {
+            year: "2023 - 2024",
+            company: "TenderOnTime",
+            role: "Python Developer",
+
+            tech: [
+                "Python",
+                "Automation",
+                "Web Scraping"
+            ],
+
+            achievements: [
+                "Multi-threaded Scrapers",
+                "Automation Systems"
+            ]
+        }
+
+    ];
+
     return (
+
         <section id="experience">
 
             <Container>
 
                 <h2 className="display-4 text-center neon-text mb-5">
-                    EXPERIENCE
+
+                    EXPERIENCE JOURNEY
+
                 </h2>
 
                 <div className="timeline">
 
-                    <div className="timeline-item">
+                    {jobs.map((job, index) => (
 
-                        <h3>Ind-Velloni</h3>
+                        <div
+                            className="timeline-item"
+                            key={index}
+                        >
 
-                        <h5>Developer</h5>
+                            <div className="timeline-dot"></div>
 
-                        <p>Nov 2025 - Present</p>
+                            <div className="timeline-content">
 
-                        <ul>
-                            <li>Developed AI-powered internal tools.</li>
-                            <li>Built TenderTrack for GeM tender scraping and management.</li>
-                            <li>Built Agreement Management System with role-based access and version control.</li>
-                            <li>Built Applicant Tracking System using React, Node.js, Express and SQLite.</li>
-                        </ul>
+                                <span className="timeline-year">
+                                    {job.year}
+                                </span>
 
-                    </div>
+                                <h3>
+                                    {job.company}
+                                </h3>
 
-                    <div className="timeline-item">
+                                <h5>
+                                    {job.role}
+                                </h5>
 
-                        <h3>Workverse</h3>
+                                <div className="timeline-tech">
 
-                        <h5>Game Developer & Growth Architect</h5>
+                                    {job.tech.map((tech, i) => (
 
-                        <p>Dec 2024 - Oct 2025</p>
+                                        <span
+                                            key={i}
+                                            className="tech-pill"
+                                        >
+                                            {tech}
+                                        </span>
 
-                        <ul>
-                            <li>Designed and developed gameplay systems in Unity.</li>
-                            <li>Built 3D simulation projects including Workverse, Bellverse and Kamlaverse.</li>
-                            <li>Led Unity development of Kamlaverse.</li>
-                            <li>Collaborated with teams on feature implementation and debugging.</li>
-                            <li>Managed client communication and requirements gathering.</li>
-                        </ul>
+                                    ))}
 
-                    </div>
+                                </div>
 
-                    <div className="timeline-item">
+                                <ul>
 
-                        <h3>Big Pixel Technologies</h3>
+                                    {job.achievements.map((item, i) => (
 
-                        <h5>Game Developer</h5>
+                                        <li key={i}>
+                                            {item}
+                                        </li>
 
-                        <p>Apr 2024 - Oct 2024</p>
+                                    ))}
 
-                        <ul>
-                            <li>Developed Android games using Adobe Animate and ActionScript.</li>
-                            <li>Worked on multiple educational and coloring applications.</li>
-                        </ul>
+                                </ul>
 
-                    </div>
+                            </div>
 
-                    <div className="timeline-item">
+                        </div>
 
-                        <h3>TenderOnTime</h3>
-
-                        <h5>Python Developer</h5>
-
-                        <p>Dec 2023 - Apr 2024</p>
-
-                        <ul>
-                            <li>Built multithreaded web scraping solutions using Python.</li>
-                            <li>Automated data collection and operational workflows.</li>
-                        </ul>
-
-                    </div>
-
-                    <div className="timeline-item">
-
-                        <h3>FooFoo Kids</h3>
-
-                        <h5>Game Developer Intern</h5>
-
-                        <p>Dec 2023 - Apr 2024</p>
-
-                        <ul>
-                            <li>Assisted in mobile game development and gameplay implementation.</li>
-                        </ul>
-
-                    </div>
+                    ))}
 
                 </div>
 
             </Container>
 
         </section>
+
     );
 }
 

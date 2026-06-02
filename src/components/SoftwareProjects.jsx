@@ -1,65 +1,149 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { useState } from "react";
 
-const projects = [
-    {
-        title: "Applicant Tracking System",
-        stack: "React • Node.js • Express • SQLite",
-        description:
-            "Role-based hiring platform with job approvals, candidate management and workflow automation."
-    },
+import {
+    Container,
+    Row,
+    Col,
+    Card,
+    Button
+} from "react-bootstrap";
 
-    {
-        title: "Agreement Management System",
-        stack: "React • Node.js • Express • SQLite",
-        description:
-            "Document management platform with version control, role-based permissions and workflow tracking."
-    },
+import softwareProjectsData from "../data/softwareProjectsData";
 
-    {
-        title: "TenderTrack",
-        stack: "Python • AI • Scraping",
-        description:
-            "Government tender scraping, monitoring and tracking platform with automation features."
-    }
-];
+import SoftwareProjectsModal from "./SoftwareProjectsModal";
 
 function SoftwareProjects() {
+
+    const [show, setShow] = useState(false);
+
+    const [selectedProject, setSelectedProject] =
+        useState(null);
+
+    const openProject = (project) => {
+
+        setSelectedProject(project);
+
+        setShow(true);
+    };
+
     return (
+
         <section id="software-projects">
 
             <Container>
 
                 <h2 className="display-4 text-center neon-text mb-5">
+
                     SOFTWARE PROJECTS
+
                 </h2>
 
                 <Row>
 
-                    {projects.map((project, index) => (
-                        <Col lg={4} key={index} className="mb-4">
+                    {softwareProjectsData.map((project) => (
 
-                            <div className="glass-card software-card p-4 h-100">
+                        <Col
+                            lg={4}
+                            md={6}
+                            className="mb-4"
+                            key={project.id}
+                        >
 
-                                <h3>{project.title}</h3>
+                            <Card className="glass-card game-card h-100">
 
-                                <p className="tech-text">
-                                    {project.stack}
-                                </p>
+                                <div className="game-image-wrapper">
 
-                                <p>
-                                    {project.description}
-                                </p>
+                                    <Card.Img
+                                        variant="top"
+                                        src={project.image}
+                                        className="game-img"
+                                    />
 
-                            </div>
+                                </div>
+
+                                <Card.Body>
+
+                                    <Card.Title className="game-title">
+
+                                        {project.title}
+
+                                    </Card.Title>
+
+                                    <div className="feature-tags">
+
+                                        {project.features
+                                            .slice(0, 3)
+                                            .map((feature, index) => (
+
+                                                <span
+                                                    key={index}
+                                                    className="feature-tag"
+                                                >
+                                                    {feature}
+                                                </span>
+
+                                            ))}
+
+                                    </div>
+
+                                    <Card.Text className="game-description">
+
+                                        {project.overview}
+
+                                    </Card.Text>
+
+                                    <div className="tech-stack">
+
+                                        {project.technologies
+                                            .slice(0, 2)
+                                            .map((tech, index) => (
+
+                                                <span
+                                                    key={index}
+                                                    className="tech-pill"
+                                                >
+                                                    {tech}
+                                                </span>
+
+                                            ))}
+
+                                    </div>
+
+                                    <div className="game-buttons">
+
+                                        <Button
+                                            className="details-btn"
+                                            onClick={() =>
+                                                openProject(project)
+                                            }
+                                        >
+
+                                            View Details
+
+                                        </Button>
+
+                                    </div>
+
+                                </Card.Body>
+
+                            </Card>
 
                         </Col>
+
                     ))}
 
                 </Row>
 
             </Container>
 
+            <SoftwareProjectsModal
+                show={show}
+                onHide={() => setShow(false)}
+                project={selectedProject}
+            />
+
         </section>
+
     );
 }
 

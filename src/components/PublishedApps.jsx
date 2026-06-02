@@ -1,74 +1,159 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { useState } from "react";
 
-const apps = [
-    {
-        name: "ABC Preschool Games",
-        link: "#"
-    },
+import {
+    Container,
+    Row,
+    Col,
+    Card,
+    Button
+} from "react-bootstrap";
 
-    {
-        name: "Animal Coloring Games for Kids",
-        link: "#"
-    },
+import publishedAppsData from "../data/publishedAppsData";
 
-    {
-        name: "ABC Flashcards & Puzzle Games",
-        link: "#"
-    },
-
-    {
-        name: "Mandala Art: Coloring Pages",
-        link: "#"
-    },
-
-    {
-        name: "Super Hero Games Coloring",
-        link: "#"
-    }
-];
+import PublishedAppsModal from "./PublishedAppsModal";
 
 function PublishedApps() {
+
+    const [show, setShow] = useState(false);
+
+    const [selectedApp, setSelectedApp] =
+        useState(null);
+
+    const openApp = (app) => {
+
+        setSelectedApp(app);
+
+        setShow(true);
+    };
+
     return (
+
         <section id="published-apps">
 
             <Container>
 
                 <h2 className="display-4 text-center neon-text mb-5">
+
                     PUBLISHED PLAY STORE APPS
+
                 </h2>
 
                 <Row>
 
-                    {apps.map((app, index) => (
-                        <Col lg={4} md={6} key={index} className="mb-4">
+                    {publishedAppsData.map((app) => (
 
-                            <div className="glass-card app-card p-4 h-100">
+                        <Col
+                            lg={4}
+                            md={6}
+                            className="mb-4"
+                            key={app.id}
+                        >
 
-                                <h4>{app.name}</h4>
+                            <Card className="glass-card game-card h-100">
 
-                                <p>
-                                    Published on Google Play Store
-                                </p>
+                                <div className="game-image-wrapper">
 
-                                <a
-                                    href={app.link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="btn btn-outline-info"
-                                >
-                                    View App
-                                </a>
+                                    <Card.Img
+                                        variant="top"
+                                        src={app.image}
+                                        className="game-img"
+                                    />
 
-                            </div>
+                                </div>
+
+                                <Card.Body>
+
+                                    <Card.Title className="game-title">
+
+                                        {app.title}
+
+                                    </Card.Title>
+
+                                    <div className="feature-tags">
+
+                                        {app.features
+                                            .slice(0, 3)
+                                            .map((feature, index) => (
+
+                                                <span
+                                                    key={index}
+                                                    className="feature-tag"
+                                                >
+                                                    {feature}
+                                                </span>
+
+                                            ))}
+
+                                    </div>
+
+                                    <Card.Text className="game-description">
+
+                                        {app.overview}
+
+                                    </Card.Text>
+
+                                    <div className="tech-stack">
+
+                                        {app.technologies
+                                            .slice(0, 2)
+                                            .map((tech, index) => (
+
+                                                <span
+                                                    key={index}
+                                                    className="tech-pill"
+                                                >
+                                                    {tech}
+                                                </span>
+
+                                            ))}
+
+                                    </div>
+
+                                    <div className="game-buttons">
+
+                                        <Button
+                                            className="details-btn"
+                                            onClick={() =>
+                                                openApp(app)
+                                            }
+                                        >
+
+                                            View Details
+
+                                        </Button>
+
+                                        <Button
+                                            variant="outline-info"
+                                            href={app.playstore}
+                                            target="_blank"
+                                        >
+
+                                            Play Store
+
+                                        </Button>
+
+                                    </div>
+
+                                </Card.Body>
+
+                            </Card>
 
                         </Col>
+
                     ))}
 
                 </Row>
 
             </Container>
 
+            <PublishedAppsModal
+                show={show}
+                onHide={() => setShow(false)}
+                app={selectedApp}
+            />
+
         </section>
+
     );
 }
 

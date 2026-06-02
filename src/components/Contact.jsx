@@ -52,7 +52,8 @@ function Contact() {
                         </a>
 
                         <a
-                            href="public/Aditya-GameDeveloper.pdf"
+                            href={`${import.meta.env.BASE_URL}public/Aditya-GameDeveloper.pdf`}
+                            download
                             target="_blank"
                         >
                             <FaFileDownload />

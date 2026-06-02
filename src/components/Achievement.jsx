@@ -1,64 +1,82 @@
 import { Container, Row, Col } from "react-bootstrap";
 
+const achievements = [
+    {
+        title: "Unity Certified Associate",
+        issuer: "Unity",
+        image: `${import.meta.env.BASE_URL}images/certificates/associate.png`
+    },
+
+    {
+        title: "Unity Essentials",
+        issuer: "Unity",
+        image: `${import.meta.env.BASE_URL}images/certificates/essentials.png`
+    },
+
+    {
+        title: "Unity Junior Programmer",
+        issuer: "Unity",
+        image: `${import.meta.env.BASE_URL}images/certificates/junior-programmer.png`
+    }
+];
+
 function Achievement() {
+
     return (
-        <section id="achievement">
+
+        <section id="achievements">
 
             <Container>
 
                 <h2 className="display-4 text-center neon-text mb-5">
-                    ACHIEVEMENTS
+
+                    CERTIFICATIONS & ACHIEVEMENTS
+
                 </h2>
 
                 <Row>
 
-                    <Col lg={6} className="mb-4">
+                    {achievements.map((badge, index) => (
 
-                        <div className="glass-card p-4 h-100">
+                        <Col
+                            lg={4}
+                            md={6}
+                            key={index}
+                            className="mb-4"
+                        >
 
-                            <h3 className="text-info">
-                                Unity × Google Play Developer Program
-                            </h3>
+                            <div className="achievement-card">
 
-                            <p className="mt-3">
-                                Selected among 500 developers from over
-                                5,400 applicants across India.
-                            </p>
+                                <div className="achievement-image-wrapper">
 
-                            <p>
-                                Successfully completed the Unity × Google Play
-                                Game Developer Training Program and gained
-                                industry-level exposure to Unity development.
-                            </p>
+                                    <img
+                                        src={badge.image}
+                                        alt={badge.title}
+                                        className="achievement-image"
+                                    />
 
-                        </div>
+                                </div>
 
-                    </Col>
+                                <h4>
+                                    {badge.title}
+                                </h4>
 
-                    <Col lg={6} className="mb-4">
+                                <p>
+                                    Issued by {badge.issuer}
+                                </p>
 
-                        <div className="glass-card p-4 h-100">
+                            </div>
 
-                            <h3 className="text-info">
-                                Unity Certified Associate
-                            </h3>
+                        </Col>
 
-                            <p className="mt-3">
-                                Earned the Unity Certified Associate
-                                certification demonstrating knowledge of
-                                gameplay programming, Unity workflows and
-                                game development fundamentals.
-                            </p>
-
-                        </div>
-
-                    </Col>
+                    ))}
 
                 </Row>
 
             </Container>
 
         </section>
+
     );
 }
 

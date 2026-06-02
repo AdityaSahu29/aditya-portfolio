@@ -18,11 +18,11 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navMenu">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <a className="nav-link" href="#games">Games</a>
+                            <a className="nav-link" href="#goal">Goal</a>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#goal">Goal</a>
+                            <a className="nav-link" href="#games">Games</a>
                         </li>
 
                         <li className="nav-item">
