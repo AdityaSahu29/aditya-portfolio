@@ -71,7 +71,7 @@ function Hero() {
                             </a>
 
                             <a
-                                href="/resume.pdf"
+                                href={`${import.meta.env.BASE_URL}public/Aditya-GameDeveloper.pdf`}
                                 download
                                 className="resume-btn"
                             >

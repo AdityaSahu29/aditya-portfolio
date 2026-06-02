@@ -1,10 +1,12 @@
+const BASE = import.meta.env.BASE_URL;
+
 const gamesData = [
     {
         id: 1,
 
         title: "Pen Fight",
 
-        image: "/images/penfight.jpg",
+        image: `${BASE}/images/penfight.jpg`,
 
         overview:
             "A nostalgic physics-based school pen fighting game inspired by classroom memories. Challenge friends or battle against an AI opponent named Ink in intense pen flipping battles.",
@@ -40,7 +42,7 @@ const gamesData = [
 
         title: "Save The Bird",
 
-        image: "/images/savebird.jpg",
+        image: `${BASE}/images/savebird.jpg`,
 
         overview:
             "A Flappy Bird-inspired mobile game that replaces traditional pipes with mobile towers to spread awareness about bird safety and environmental conservation.",
@@ -75,7 +77,7 @@ const gamesData = [
 
         title: "Tower Defense",
 
-        image: "/images/towerdefense.jpg",
+        image: `${BASE}/images/towerdefense.jpg`,
 
         overview:
             "A 2D strategy tower defense game where players strategically place different turret types to stop waves of approaching enemies.",
@@ -110,7 +112,7 @@ const gamesData = [
 
         title: "Escape The Rooms",
 
-        image: "/images/escaperoom.jpg",
+        image: `${BASE}/images/escaperoom.jpg`,
 
         overview:
             "A 2D platformer where players navigate through obstacle-filled rooms and face increasingly difficult challenges before escaping.",
@@ -145,7 +147,7 @@ const gamesData = [
 
         title: "Zombie Toy",
 
-        image: "/images/zombietoy.jpg",
+        image: `${BASE}/images/zombietoy.jpg`,
 
         overview:
             "A room full of toys has been transformed into zombies. Players use magical elemental wands and an AI ally to survive the invasion.",

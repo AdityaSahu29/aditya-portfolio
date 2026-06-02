@@ -3,7 +3,7 @@ import { OrbitControls, Environment, Float, useGLTF } from "@react-three/drei";
 
 function ControllerModel() {
 
-    const { scene } = useGLTF("/models/controller.glb");
+    const { scene } = useGLTF(`${import.meta.env.BASE_URL}models/controller.glb`)
 
     return (
         <Float
