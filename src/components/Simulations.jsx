@@ -121,6 +121,14 @@ function Simulations() {
 
                                         </Button>
 
+                                        <Button
+                                            className="details-btn"
+                                            href={simulation.playstore}
+                                            target="_blank"
+                                        >
+                                            Play Store
+                                        </Button>
+
                                     </div>
 
                                 </Card.Body>

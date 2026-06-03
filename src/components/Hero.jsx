@@ -70,10 +70,11 @@ function Hero() {
 
                             <a
                                 href={`${import.meta.env.BASE_URL}public/Aditya-GameDeveloper.pdf`}
-                                download
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="resume-btn"
                             >
-                                Download Resume
+                                View Resume
                             </a>
 
                         </div>

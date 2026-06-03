@@ -28,7 +28,7 @@ const publishedAppsData = [
             "Android"
         ],
 
-        playstore: "#"
+        playstore: "https://play.google.com/store/apps/details?id=com.kiddzoo.abc.preschool.games.kids&hl=en_IN"
     },
 
     {
@@ -57,7 +57,7 @@ const publishedAppsData = [
             "Android"
         ],
 
-        playstore: "#"
+        playstore: "https://play.google.com/store/apps/details?id=com.kiddzoo.kids.animal.color.game&hl=en_IN"
     },
 
     {
@@ -85,7 +85,7 @@ const publishedAppsData = [
             "ActionScript"
         ],
 
-        playstore: "#"
+        playstore: "https://play.google.com/store/apps/details?id=com.kiddzoo.abc123.tracing.toddler.games&hl=en_IN"
     },
 
     {
@@ -113,7 +113,7 @@ const publishedAppsData = [
             "ActionScript"
         ],
 
-        playstore: "#"
+        playstore: "https://play.google.com/store/apps/details?id=com.kiddzoo.mandala.coloring.book&hl=en_IN"
     },
 
     {
@@ -141,7 +141,7 @@ const publishedAppsData = [
             "ActionScript"
         ],
 
-        playstore: "#"
+        playstore: "https://play.google.com/store/apps/details?id=com.kiddzoo.superhero.games.coloring.book&hl=en_IN"
     }
 
 ];

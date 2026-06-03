@@ -66,7 +66,7 @@ const softwareProjectsData = [
     {
         id: 3,
 
-        title: "TenderTrack",
+        title: "Tender Searching & Tracking System",
 
         image: `${import.meta.env.BASE_URL}images/tendertrack.png`,
 

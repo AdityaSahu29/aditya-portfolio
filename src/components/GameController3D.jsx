@@ -7,14 +7,14 @@ function ControllerModel() {
 
     return (
         <Float
-            speed={2}
+            speed={0.1}
             rotationIntensity={0.5}
             floatIntensity={1}
         >
             <primitive
                 object={scene}
                 scale={1}
-                rotation={[0.2, 0.5, 0]}
+                rotation={[45, 0.5, 0]}
             />
         </Float>
     );

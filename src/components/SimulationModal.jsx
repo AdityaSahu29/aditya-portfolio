@@ -76,6 +76,14 @@ function SimulationModal({ show, onHide, simulation }) {
             <Modal.Footer>
 
                 <Button
+                    variant="outline-info"
+                    href={simulation.playstore}
+                    target="_blank"
+                >
+                    Play Store
+                </Button>
+
+                <Button
                     variant="info"
                     onClick={onHide}
                 >

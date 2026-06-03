@@ -10,27 +10,28 @@ const simulationData = [
         image: `${BASE}images/workverse.jpg`,
 
         overview:
-            "Mobile-based simulation platform developed using Unity for immersive learning and interactive experiences.",
+            "A Unity-based gamified workplace simulation platform that helps users develop soft skills, workplace intelligence, and decision-making through interactive real-world scenarios.",
 
         role:
             "Game Developer & Growth Architect",
 
         features: [
-            "3D Simulation",
-            "Interactive Environment",
-            "Training Experience",
-            "Mobile Support"
+            "Workplace Simulation",
+            "AI Soft Skills Coach",
+            "Career Progression System",
+            "Interactive Decision Making",
+            "Gamified Learning"
         ],
 
         technologies: [
             "Unity",
             "C#",
-            "UI Toolkit",
-            "Mobile Development"
         ],
 
         challenges:
-            "Designed and optimized simulation workflows while ensuring smooth performance on mobile devices."
+            "Designed and optimized simulation workflows while ensuring smooth performance on mobile devices.",
+
+        playstore: "https://play.google.com/store/apps/details?id=com.Workverse.Simulator&hl=en_IN"
     },
 
     {
@@ -41,10 +42,10 @@ const simulationData = [
         image: `${BASE}images/bellverse.jpg`,
 
         overview:
-            "Interactive simulation project focused on user engagement and immersive experiences.",
+            "A hospitality service training simulator designed to help employees master customer service standards through realistic scenarios and AI-guided coaching.",
 
         role:
-            "Unity Developer",
+            "Game Developer & Growth Architect",
 
         features: [
             "3D Environment",
@@ -55,11 +56,12 @@ const simulationData = [
         technologies: [
             "Unity",
             "C#",
-            "Mobile UI"
         ],
 
         challenges:
-            "Built engaging simulation interactions while maintaining performance and usability."
+            "Developed interactive cutscenes and service-training experiences that transformed real-world hospitality workflows into engaging gameplay scenarios. Collaborated with stakeholders to deliver intuitive and effective learning experiences.",
+
+        playstore: "https://play.google.com/store/apps/details?id=com.Bellverse.Simulator&hl=en_IN"
     },
 
     {
@@ -70,7 +72,7 @@ const simulationData = [
         image: `${BASE}images/kamlaverse.jpg`,
 
         overview:
-            "Complete Unity simulation project developed independently from planning to deployment.",
+            "A role-based service training simulation where employees learn operational workflows, guest interactions, teamwork, and service excellence through practical scenarios.",
 
         role:
             "Lead Unity Developer",
@@ -89,7 +91,9 @@ const simulationData = [
         ],
 
         challenges:
-            "Managed the complete development lifecycle including gameplay systems, UI, optimization and deployment."
+            "Managed end-to-end Unity development while coordinating between clients and internal teams including backend developers, UI designers, and 3D artists. Implemented API integrations, handled requirement changes, and ensured smooth production, testing, and delivery of the final product.",
+
+        playstore: "https://play.google.com/store/apps/details?id=com.kamlaverse&hl=en_IN"
     }
 ];
 

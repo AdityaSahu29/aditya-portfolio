@@ -24,7 +24,7 @@ function DreamGoal() {
                     </p>
 
                     <h4 className="text-info mt-4">
-                        "Relive Your School Days Again"
+                        "Back to School: The Ultimate Playground"
                     </h4>
 
                 </div>

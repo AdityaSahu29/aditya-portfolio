@@ -113,6 +113,14 @@ function Games() {
                                                 View Details
                                             </Button>
 
+                                            <Button
+                                                className="details-btn"
+                                                variant="success"
+                                                href={game.apk}
+                                                download
+                                            >
+                                                Android APK
+                                            </Button>
 
                                         </div>
 

@@ -123,7 +123,7 @@ function PublishedApps() {
                                         </Button>
 
                                         <Button
-                                            variant="outline-info"
+                                            className="details-btn"
                                             href={app.playstore}
                                             target="_blank"
                                         >

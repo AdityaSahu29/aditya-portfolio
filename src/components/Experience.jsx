@@ -5,7 +5,7 @@ function Experience() {
     const jobs = [
 
         {
-            year: "2025 - Present",
+            year: "Nov 2025 - Present",
             company: "Ind-Velloni",
             role: "Developer",
 
@@ -20,12 +20,12 @@ function Experience() {
             achievements: [
                 "Applicant Tracking System",
                 "Agreement Management System",
-                "TenderTrack"
+                "Tender Searching & Tracking System"
             ]
         },
 
         {
-            year: "2024 - 2025",
+            year: "Dec 2024 - Oct2025",
             company: "Workverse",
             role: "Game Developer & Growth Architect",
 
@@ -44,7 +44,7 @@ function Experience() {
         },
 
         {
-            year: "2024",
+            year: "Apr 2024 - Nov 2024",
             company: "Big Pixel Technologies",
             role: "Game Developer",
 
@@ -62,7 +62,7 @@ function Experience() {
         },
 
         {
-            year: "2023 - 2024",
+            year: "Dec 2023 - Apr 2024",
             company: "TenderOnTime",
             role: "Python Developer",
 

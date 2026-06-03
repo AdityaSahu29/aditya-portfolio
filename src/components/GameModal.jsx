@@ -81,11 +81,19 @@ function GameModal({ show, onHide, game }) {
 
                 <Button
                     variant="info"
-                    href={game.playstore}
-                    target="_blank"
+                    href={game.apk}
+                    download
                 >
-                    Play Store
+                    Android APK
                 </Button>
+
+                <Button
+                    variant="info"
+                    onClick={onHide}
+                >
+                    Close
+                </Button>
+
 
             </Modal.Footer>
 

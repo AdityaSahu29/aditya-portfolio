@@ -33,8 +33,7 @@ const gamesData = [
         role:
             "Designed and developed the complete game including gameplay mechanics, physics tuning, UI implementation and Android deployment.",
 
-        playstore:
-            "https://play.google.com/store/apps/details?id=YOUR_APP_ID"
+        apk: `${BASE}apks/pen-fight.apk`
     },
 
     {
@@ -69,7 +68,7 @@ const gamesData = [
         role:
             "Designed gameplay mechanics, obstacle spawning system, score management and mobile optimization.",
 
-
+        apk: `${BASE}apks/save-the-bird.apk`
     },
 
     {
@@ -103,7 +102,7 @@ const gamesData = [
 
         role:
             "Developed enemy behavior systems, turret mechanics, wave management and game balancing.",
-
+        apk: `${BASE}apks/tower-defense.apk`
 
     },
 
@@ -138,7 +137,7 @@ const gamesData = [
 
         role:
             "Developed player controls, room systems, obstacle mechanics, enemy encounters and boss fights.",
-
+        apk: `${BASE}apks/escape-the-rooms.apk`
 
     },
 
@@ -174,7 +173,7 @@ const gamesData = [
         role:
             "Implemented combat mechanics, enemy AI, elemental effects and ally behavior systems.",
 
-
+        apk: `${BASE}apks/zombie-toy.apk`
     }
 ];
 
