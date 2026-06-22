@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import RevealOnScroll from "./RevealOnScroll";
 
 function DreamGoal() {
     return (
@@ -6,7 +7,7 @@ function DreamGoal() {
 
             <Container>
 
-                <div className="glass-card p-5 text-center">
+                <RevealOnScroll className="glass-card p-5 text-center">
 
                     <h2 className="display-4 neon-text">
                         MY DREAM PROJECT
@@ -27,7 +28,7 @@ function DreamGoal() {
                         "Back to School: The Ultimate Playground"
                     </h4>
 
-                </div>
+                </RevealOnScroll>
 
             </Container>
 

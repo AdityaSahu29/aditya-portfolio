@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import RevealOnScroll from "./RevealOnScroll";
 
 const achievements = [
     {
@@ -38,11 +39,13 @@ function Achievement() {
 
                     {achievements.map((badge, index) => (
 
-                        <Col
+                        <RevealOnScroll
+                            as={Col}
                             lg={4}
                             md={6}
                             key={index}
                             className="mb-4"
+                            delay={index * 100}
                         >
 
                             <div className="achievement-card">
@@ -67,7 +70,7 @@ function Achievement() {
 
                             </div>
 
-                        </Col>
+                        </RevealOnScroll>
 
                     ))}
 

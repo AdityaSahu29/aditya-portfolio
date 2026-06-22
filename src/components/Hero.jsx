@@ -1,12 +1,14 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { FaChevronDown } from "react-icons/fa";
 
-import GameController3D from "./GameController3D";
+import HeroAvatar from "./HeroAvatar";
+import { RippleLink } from "./RippleButton";
 
 function Hero() {
     return (
-        <section className="hero">
+        <section className="hero" id="home">
 
             <div className="orb orb1"></div>
             <div className="orb orb2"></div>
@@ -18,6 +20,16 @@ function Hero() {
                     {/* LEFT SIDE */}
 
                     <Col lg={7} md={12}>
+
+                        <motion.div
+                            className="hero-status"
+                            initial={{ opacity: 0, y: 18 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7 }}
+                        >
+                            <span className="status-dot"></span>
+                            Available for Unity & Simulation Roles
+                        </motion.div>
 
                         <motion.h1
                             className="hero-title"
@@ -61,27 +73,27 @@ function Hero() {
 
                         <div className="hero-buttons">
 
-                            <a
+                            <RippleLink
                                 href="#games"
                                 className="cyber-btn"
                             >
                                 Explore Projects
-                            </a>
+                            </RippleLink>
 
-                            <a
-                                href={`${import.meta.env.BASE_URL}public/Aditya-GameDeveloper.pdf`}
+                            <RippleLink
+                                href={`${import.meta.env.BASE_URL}Aditya-GameDeveloper.pdf`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="resume-btn"
                             >
                                 View Resume
-                            </a>
+                            </RippleLink>
 
                         </div>
 
                         <div className="achievement-badge">
 
-                            🏆 Unity Certified Associate
+                            Unity Certified Associate
 
                         </div>
 
@@ -98,7 +110,9 @@ function Hero() {
                             transition={{ duration: 1 }}
                         >
 
-                            <GameController3D />
+                            <div className="hero-avatar-shell">
+                                <HeroAvatar />
+                            </div>
 
                         </motion.div>
 
@@ -107,6 +121,15 @@ function Hero() {
                 </Row>
 
             </Container>
+
+            {/* SCROLL DOWN INDICATOR */}
+            <motion.div
+                className="scroll-indicator"
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+            >
+                <FaChevronDown />
+            </motion.div>
 
         </section>
     );

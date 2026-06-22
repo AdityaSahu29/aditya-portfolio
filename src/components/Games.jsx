@@ -4,13 +4,15 @@ import {
     Container,
     Row,
     Col,
-    Card,
-    Button
+    Card
 } from "react-bootstrap";
 
 import gamesData from "../data/gamesData";
 
 import GameModal from "./GameModal";
+import RevealOnScroll from "./RevealOnScroll";
+import RippleButton from "./RippleButton";
+import TiltCard from "./TiltCard";
 
 function Games() {
 
@@ -36,16 +38,18 @@ function Games() {
                 <Row>
 
                     {
-                        gamesData.map((game) => (
+                        gamesData.map((game, index) => (
 
-                            <Col
+                            <RevealOnScroll
+                                as={Col}
                                 lg={4}
                                 md={6}
                                 className="mb-4"
                                 key={game.id}
+                                delay={index * 90}
                             >
 
-                                <Card className="glass-card game-card h-100">
+                                <TiltCard className="h-100">
 
                                     <div className="game-image-wrapper">
 
@@ -104,31 +108,32 @@ function Games() {
 
                                         <div className="game-buttons">
 
-                                            <Button
+                                            <RippleButton
                                                 className="details-btn"
                                                 onClick={() => {
                                                     openGame(game);
                                                 }}
                                             >
                                                 View Details
-                                            </Button>
+                                                <span className="btn-arrow">→</span>
+                                            </RippleButton>
 
-                                            <Button
+                                            <RippleButton
                                                 className="details-btn"
                                                 variant="success"
                                                 href={game.apk}
                                                 download
                                             >
                                                 Android APK
-                                            </Button>
+                                            </RippleButton>
 
                                         </div>
 
                                     </Card.Body>
 
-                                </Card>
+                                </TiltCard>
 
-                            </Col>
+                            </RevealOnScroll>
 
                         ))
                     }

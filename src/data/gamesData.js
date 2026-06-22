@@ -35,76 +35,73 @@ const gamesData = [
 
         apk: `${BASE}apks/pen-fight.apk`
     },
-
     {
         id: 2,
-
-        title: "Save The Bird",
-
-        image: `${BASE}/images/savebird.jpg`,
-
+        title: "AURA",
+        image: `${BASE}/images/aura.jpg`,
         overview:
-            "A Flappy Bird-inspired mobile game that replaces traditional pipes with mobile towers to spread awareness about bird safety and environmental conservation.",
-
+            "A highly personalized mobile identity card and profile customizer application featuring robust secure authentication, dynamic remote database storage, and a real-time player data pipeline.",
         features: [
-            "Endless Runner",
-            "Increasing Difficulty",
-            "Score Tracking",
-            "Mobile Controls",
-            "Environmental Awareness",
-            "Leaderboard Ready"
+            "Secure Email & Password Authentication",
+            "Plugin-Free Native Google Sign-In",
+            "Onboarding & Profile Identity Creation",
+            "Dynamic 3D Character/Avatar Instantiation",
+            "Profile Identity Card Generation",
+            "Public Portfolio Profile Sharing Link",
+            "Responsive Navigation Layout"
         ],
-
         technologies: [
             "Unity",
             "C#",
-            "2D Physics",
-            "UI System"
+            "Firebase Auth",
+            "Firebase Firestore NoSQL",
+            "Event-Driven Architecture",
+            "Deep Linking & Browser OAuth Redirects"
         ],
-
         challenges:
-            "Creating a smooth difficulty curve while maintaining enjoyable gameplay and optimizing performance for low-end Android devices.",
-
+            "Navigating deprecated local platform integration assemblies by designing a modern, cloud-based plugin-free authentication wrapper using Federated OAuth browser loops and custom URL schemes.",
         role:
-            "Designed gameplay mechanics, obstacle spawning system, score management and mobile optimization.",
-
-        apk: `${BASE}apks/save-the-bird.apk`
+            "Architected a cleanly decoupled event-driven system, managed remote NoSQL profile mapping, implemented secure web authentication loops, and optimized data serialization pipelines.",
+        apk: `${BASE}apks/aura.apk`
     },
 
     {
         id: 3,
 
-        title: "Tower Defense",
+        title: "Zombie Toy",
 
-        image: `${BASE}/images/towerdefense.jpg`,
+        image: `${BASE}/images/zombietoy.jpg`,
 
         overview:
-            "A 2D strategy tower defense game where players strategically place different turret types to stop waves of approaching enemies.",
+            "A room full of toys has been transformed into zombies. Players use magical elemental wands and an AI ally to survive the invasion.",
 
         features: [
-            "2 Turret Types",
-            "2 Enemy Types",
-            "Strategic Gameplay",
-            "Wave System",
-            "Enemy AI",
-            "Progressive Difficulty"
+            "Electric Wand",
+            "Freeze Wand",
+            "Wave-Based Combat",
+            "Poison Wand",
+            "Stun Wand",
+            "AI Companion"
         ],
 
         technologies: [
             "Unity",
             "C#",
-            "AI Systems",
-            "Pathfinding"
+            "Combat Systems",
+            "Enemy AI"
         ],
 
         challenges:
-            "Balancing enemy waves, turret damage and progression to create a rewarding strategic experience.",
+            "Developing unique elemental abilities while ensuring each wand felt distinct and useful in combat situations.",
 
         role:
-            "Developed enemy behavior systems, turret mechanics, wave management and game balancing.",
-        apk: `${BASE}apks/tower-defense.apk`
+            "Implemented combat mechanics, enemy AI, elemental effects and ally behavior systems.",
 
-    },
+        apk: `${BASE}apks/zombie-toy.apk`
+    }
+
+    ,
+
 
     {
         id: 4,
@@ -144,36 +141,72 @@ const gamesData = [
     {
         id: 5,
 
-        title: "Zombie Toy",
+        title: "Tower Defense",
 
-        image: `${BASE}/images/zombietoy.jpg`,
+        image: `${BASE}/images/towerdefense.jpg`,
 
         overview:
-            "A room full of toys has been transformed into zombies. Players use magical elemental wands and an AI ally to survive the invasion.",
+            "A 2D strategy tower defense game where players strategically place different turret types to stop waves of approaching enemies.",
 
         features: [
-            "Electric Wand",
-            "Freeze Wand",
-            "Wave-Based Combat",
-            "Poison Wand",
-            "Stun Wand",
-            "AI Companion"
+            "2 Turret Types",
+            "2 Enemy Types",
+            "Strategic Gameplay",
+            "Wave System",
+            "Enemy AI",
+            "Progressive Difficulty"
         ],
 
         technologies: [
             "Unity",
             "C#",
-            "Combat Systems",
-            "Enemy AI"
+            "AI Systems",
+            "Pathfinding"
         ],
 
         challenges:
-            "Developing unique elemental abilities while ensuring each wand felt distinct and useful in combat situations.",
+            "Balancing enemy waves, turret damage and progression to create a rewarding strategic experience.",
 
         role:
-            "Implemented combat mechanics, enemy AI, elemental effects and ally behavior systems.",
+            "Developed enemy behavior systems, turret mechanics, wave management and game balancing.",
+        apk: `${BASE}apks/tower-defense.apk`
 
-        apk: `${BASE}apks/zombie-toy.apk`
+    },
+
+
+    {
+        id: 6,
+
+        title: "Save The Bird",
+
+        image: `${BASE}/images/savebird.jpg`,
+
+        overview:
+            "A Flappy Bird-inspired mobile game that replaces traditional pipes with mobile towers to spread awareness about bird safety and environmental conservation.",
+
+        features: [
+            "Endless Runner",
+            "Increasing Difficulty",
+            "Score Tracking",
+            "Mobile Controls",
+            "Environmental Awareness",
+            "Leaderboard Ready"
+        ],
+
+        technologies: [
+            "Unity",
+            "C#",
+            "2D Physics",
+            "UI System"
+        ],
+
+        challenges:
+            "Creating a smooth difficulty curve while maintaining enjoyable gameplay and optimizing performance for low-end Android devices.",
+
+        role:
+            "Designed gameplay mechanics, obstacle spawning system, score management and mobile optimization.",
+
+        apk: `${BASE}apks/save-the-bird.apk`
     }
 ];
 

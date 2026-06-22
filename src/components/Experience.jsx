@@ -1,6 +1,10 @@
+import { useEffect, useRef, useState } from "react";
 import { Container } from "react-bootstrap";
+import RevealOnScroll from "./RevealOnScroll";
 
 function Experience() {
+    const timelineRef = useRef(null);
+    const [timelineProgress, setTimelineProgress] = useState(0);
 
     const jobs = [
 
@@ -80,6 +84,39 @@ function Experience() {
 
     ];
 
+    useEffect(() => {
+        const updateProgress = () => {
+            const timeline = timelineRef.current;
+
+            if (!timeline) {
+                return;
+            }
+
+            const rect = timeline.getBoundingClientRect();
+            const viewportCenter = window.innerHeight * 0.55;
+            const progress = ((viewportCenter - rect.top) / rect.height) * 100;
+
+            setTimelineProgress(Math.max(0, Math.min(100, progress)));
+        };
+
+        updateProgress();
+        window.addEventListener("scroll", updateProgress, { passive: true });
+        window.addEventListener("resize", updateProgress);
+
+        return () => {
+            window.removeEventListener("scroll", updateProgress);
+            window.removeEventListener("resize", updateProgress);
+        };
+    }, []);
+
+    const getInitials = (company) => company
+        .split(/\s|-/)
+        .filter(Boolean)
+        .map((word) => word[0])
+        .join("")
+        .slice(0, 2)
+        .toUpperCase();
+
     return (
 
         <section id="experience">
@@ -92,16 +129,24 @@ function Experience() {
 
                 </h2>
 
-                <div className="timeline">
+                <div
+                    className="timeline"
+                    ref={timelineRef}
+                    style={{ "--timeline-progress": `${timelineProgress}%` }}
+                >
 
                     {jobs.map((job, index) => (
 
-                        <div
+                        <RevealOnScroll
                             className="timeline-item"
                             key={index}
+                            delay={index * 120}
+                            direction="left"
                         >
 
-                            <div className="timeline-dot"></div>
+                            <div className="timeline-dot">
+                                <span>{getInitials(job.company)}</span>
+                            </div>
 
                             <div className="timeline-content">
 
@@ -146,7 +191,7 @@ function Experience() {
 
                             </div>
 
-                        </div>
+                        </RevealOnScroll>
 
                     ))}
 

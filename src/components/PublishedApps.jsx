@@ -4,13 +4,15 @@ import {
     Container,
     Row,
     Col,
-    Card,
-    Button
+    Card
 } from "react-bootstrap";
 
 import publishedAppsData from "../data/publishedAppsData";
 
 import PublishedAppsModal from "./PublishedAppsModal";
+import RevealOnScroll from "./RevealOnScroll";
+import RippleButton from "./RippleButton";
+import TiltCard from "./TiltCard";
 
 function PublishedApps() {
 
@@ -40,16 +42,18 @@ function PublishedApps() {
 
                 <Row>
 
-                    {publishedAppsData.map((app) => (
+                    {publishedAppsData.map((app, index) => (
 
-                        <Col
+                        <RevealOnScroll
+                            as={Col}
                             lg={4}
                             md={6}
                             className="mb-4"
                             key={app.id}
+                            delay={index * 90}
                         >
 
-                            <Card className="glass-card game-card h-100">
+                            <TiltCard className="h-100">
 
                                 <div className="game-image-wrapper">
 
@@ -58,6 +62,14 @@ function PublishedApps() {
                                         src={app.image}
                                         className="game-img"
                                     />
+
+                                    <div className="game-overlay">
+
+                                        <span className="game-badge">
+                                            Play Store
+                                        </span>
+
+                                    </div>
 
                                 </div>
 
@@ -111,7 +123,7 @@ function PublishedApps() {
 
                                     <div className="game-buttons">
 
-                                        <Button
+                                        <RippleButton
                                             className="details-btn"
                                             onClick={() =>
                                                 openApp(app)
@@ -119,10 +131,11 @@ function PublishedApps() {
                                         >
 
                                             View Details
+                                            <span className="btn-arrow">→</span>
 
-                                        </Button>
+                                        </RippleButton>
 
-                                        <Button
+                                        <RippleButton
                                             className="details-btn"
                                             href={app.playstore}
                                             target="_blank"
@@ -130,15 +143,15 @@ function PublishedApps() {
 
                                             Play Store
 
-                                        </Button>
+                                        </RippleButton>
 
                                     </div>
 
                                 </Card.Body>
 
-                            </Card>
+                            </TiltCard>
 
-                        </Col>
+                        </RevealOnScroll>
 
                     ))}
 
