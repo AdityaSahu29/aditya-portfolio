@@ -38,7 +38,7 @@ const gamesData = [
     {
         id: 2,
         title: "AURA",
-        image: `${BASE}/images/aura.jpg`,
+        image: `${BASE}/images/aura.jpeg`,
         overview:
             "A highly personalized mobile identity card and profile customizer application featuring robust secure authentication, dynamic remote database storage, and a real-time player data pipeline.",
         features: [
