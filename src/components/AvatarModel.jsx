@@ -33,9 +33,9 @@ function AvatarModel() {
 
             <primitive
                 object={scene}
-                scale={15}
-                position={[0, -23, 0]}
-                rotation={[0, 0.5, 0]}
+                scale={10}
+                position={[-3, -10, -10]}
+                rotation={[0, 0.2, 0]}
             />
 
         </group>

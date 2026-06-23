@@ -11,10 +11,7 @@ function Skills() {
     const coreStack = [
         "Unity",
         "C#",
-        "React",
         "Python",
-        "Node.js",
-        "SQLite"
     ];
 
     const categories = [
@@ -27,10 +24,10 @@ function Skills() {
                 { name: "Unity", level: 95 },
                 { name: "C#", level: 90 },
                 { name: "Physics", level: 85 },
-                { name: "Animation", level: 85 },
-                { name: "UI Systems", level: 88 },
-                { name: "Addressables", level: 80 },
-                { name: "Gameplay Programming", level: 92 }
+                { name: "Animation", level: 65 },
+                { name: "UI", level: 88 },
+                { name: "Addressables", level: 20 },
+                { name: "Gameplay Programming", level: 82 }
             ]
         },
 
@@ -54,7 +51,7 @@ function Skills() {
                 { name: "Git", level: 88 },
                 { name: "Plastic SCM", level: 85 },
                 { name: "VS Code", level: 90 },
-                { name: "Android Studio", level: 82 }
+                { name: "Unity", level: 95 }
             ]
         },
 

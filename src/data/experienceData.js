@@ -79,6 +79,25 @@ const experienceData = [
             "Built Multi-threaded Scrapers",
             "Improved Operational Efficiency"
         ]
+    },
+
+    {
+        company: "FooFoo Kids",
+
+        role: "Game Developer (internship)",
+
+        period: "May 2021 - Oct 2021",
+
+        tech: [
+            "Adobe Animate",
+            "ActionScript",
+            "Android"
+        ],
+
+        achievements: [
+            "Helped Built Educational Games",
+            "Helped Publish Play Store Apps"
+        ]
     }
 
 ];

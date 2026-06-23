@@ -4,7 +4,7 @@ import AvatarModel from "./AvatarModel";
 
 function HeroAvatar() {
     return (
-        <Canvas camera={{ position: [2, 1, 10] }}>
+        <Canvas camera={{ position: [2, 1, 15] }}>
             <ambientLight intensity={2} />
             <directionalLight position={[5, 5, 5]} intensity={0} />
             <AvatarModel />

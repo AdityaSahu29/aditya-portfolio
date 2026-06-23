@@ -11,9 +11,9 @@ import {
 const navItems = [
     { href: "#home", label: "Home", icon: FaHome },
     { href: "#games", label: "Projects", icon: FaGamepad },
+    { href: "#achievements", label: "Awards", icon: FaAward },
     { href: "#experience", label: "Experience", icon: FaBriefcase },
     { href: "#skills", label: "Skills", icon: FaCode },
-    { href: "#achievements", label: "Awards", icon: FaAward },
     { href: "#contact", label: "Contact", icon: FaEnvelope }
 ];
 
@@ -58,7 +58,6 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg fixed-top">
             <div className="container">
                 <a className="navbar-brand" href="#home">
-                    <span className="brand-mark">AS</span>
                     <span className="brand-text">Aditya Sahu</span>
                 </a>
 
